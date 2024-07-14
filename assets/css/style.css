@@ -1,0 +1,26 @@
+html, body { /* configuración tanto al HTML como al body */
+    margin: 0px; 
+    background-color: #2F4F30; /* color del fondo del html */
+    color: white; /* El texto dentro del HTML sera blanco */
+}
+
+
+.titulo {
+    text-align: center; /* Texto alineado al centro */
+    background-color: black; /* Fondo negro */
+    color: white; /* Color del texto */
+    padding: 20px;
+    font-size: 25px;
+}
+
+.carta {
+    position: relative; /* Su posición es relativa */
+    width: 150px; /* Tamaño de la carta */
+    left: 100px; /* Que estara a la izquierda unos 100px */
+    margin-left: -75px; /* Y que tengra un margin negativo para que las cartas se sobrepongan */
+}
+
+#computadora-cartas, #jugador-cartas {
+    height: 250px;
+
+}
