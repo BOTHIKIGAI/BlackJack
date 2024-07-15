@@ -17,17 +17,17 @@
     <!-- Botones del juego -->
     <div class="row mt-2">
         <div class="col text-center">
-            <button class="btn btn-danger">Nuevo juego</button>
-            <button class="btn btn-primary">Pedir carta</button>
-            <button class="btn btn-primary">Detener</button>
+            <button id="btnNewGame" class="btn btn-danger">Nuevo juego</button>
+            <button id="btnTakeCard" class="btn btn-primary">Pedir carta</button>
+            <button id="btnStop"class="btn btn-primary">Detener</button>
         </div>
     </div>
 
     <div class="row container">
         <div class="col">
-            <h1>Juegor 1 - <small>0</small></h1>
-            <div id="jugador-cartas">
-                <img class="carta" src="assets/cartas/2C.png" alt="">
+            <h1>Juegor 1 - <small id="playerPoints">0</small></h1>
+            <div id="player-cards">
+                
             </div>
         </div>
     </div>
@@ -35,14 +35,14 @@
     <div class="row container mt-2">
         <div class="col">
         <h1>Computadora - <small>0</small></h1>
-            <div id="computadora-cartas">
-                <img class="carta" src="assets/cartas/2C.png" alt="">
+            <div id="computer-cards">
+                
             </div>
         </div>
     </div>
 
-    <script src="assets/js/juego.js"></script> <!-- Carga del archivo javascript -->
     <script src="assets/js/underscore-min.js"></script> <!-- Carga de underscore -->
+    <script src="assets/js/juego.js"></script> <!-- Carga del archivo javascript -->
 
 </body>
 </html>

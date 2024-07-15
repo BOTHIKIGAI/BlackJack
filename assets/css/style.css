@@ -20,7 +20,7 @@ html, body { /* configuración tanto al HTML como al body */
     margin-left: -75px; /* Y que tengra un margin negativo para que las cartas se sobrepongan */
 }
 
-#computadora-cartas, #jugador-cartas {
+#computer-cards, #player-cards {
     height: 250px;
 
 }
