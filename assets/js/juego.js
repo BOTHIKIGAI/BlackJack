@@ -16,6 +16,7 @@ let playerPoints = 0,
 // Referencias del HTML
 const btnTakeCard = document.querySelector('#btnTakeCard');
 const btnStop = document.querySelector('#btnStop');
+const btnNewGame = document.querySelector('#btnNewGame');
 const divCartasJugador = document.querySelector('#player-cards');
 const divCartasComputadora = document.querySelector('#computer-cards');
 const elementCounterPlayer = document.querySelectorAll('small');
@@ -141,5 +142,27 @@ btnStop.addEventListener('click', () => {
     else {
         alert('Gano');
     }
+
+});
+
+btnNewGame.addEventListener('click', () => {
+
+    // Limpiando variables
+    btnTakeCard.disabled = false;
+    btnTakeCard.disabled = false;
+    playerPoints = 0;
+    computerPoints = 0;
+    elementCounterPlayer[0].innerHTML = 0;
+    elementCounterPlayer[1].innerHTML = 0;
+
+    deck = [];
+
+
+    // Limpiando HTML 
+    divCartasComputadora.innerHTML = '';
+    divCartasJugador.innerHTML = '';
+
+    // Crando un nuevo mazo
+    crearDeck();
 
 });
