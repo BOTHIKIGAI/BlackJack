@@ -15,6 +15,7 @@ let playerPoints = 0,
 
 // Referencias del HTML
 const btnTakeCard = document.querySelector('#btnTakeCard');
+const btnStop = document.querySelector('#btnStop');
 const divCartasJugador = document.querySelector('#player-cards');
 const divCartasComputadora = document.querySelector('#computer-cards');
 const elementCounterPlayer = document.querySelectorAll('small');
@@ -85,6 +86,7 @@ const turnComputer = (minPoint) => {
 
     } while ((computerPoints < minPoint) && (minPoint <= 21) );
     
+    return computerPoints;
 
 }
 
@@ -104,13 +106,40 @@ btnTakeCard.addEventListener('click', () => {
     divCartasJugador.append(imgCard)
 
     if (playerPoints > 21) {
-        console.warn('Lo siento mucho, perdiste');
+        alert('Lo siento perdiste')
         btnTakeCard.disabled = true;
         turnComputer(playerPoints);
     }
     else if (playerPoints === 21) {
-        console.warn("Ganaste")
-        turnComputer(playerPoints);
+        if (turnComputer(playerPoints) === 21) {
+            alert('Nadie gano')
+        }
+        else {
+            alert('Ganaste')
+        }
+    }
+
+});
+
+// Detener
+btnStop.addEventListener('click', () => {
+
+    btnTakeCard.disabled = true;
+    btnStop.disabled = true;
+
+    let pointComputerStop = turnComputer(playerPoints);
+
+    if (playerPoints === 21 && pointComputerStop === 21) {
+        alert('Ninguno gano');
+    }
+    else if (pointComputerStop > playerPoints && pointComputerStop <= 21) {
+        alert('Gano la computadora');
+    }
+    else if (playerPoints === computerPoints) {
+        alert('Ninguno gano');
+    }
+    else {
+        alert('Gano');
     }
 
 });
